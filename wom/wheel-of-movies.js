@@ -1,49 +1,224 @@
 
+var movies = [
+    '12 Angry Men',
+    '2001: a Space Odyssey',
+    'A Clockwork Orange',
+    'A Night at the Opera',
+    'A Streetcar Named Desire',
+    'All About Eve',
+    'All the President\'s Men',
+    'Amelie',
+    'American Gangster',
+    'American Graffiti',
+    'American Psycho',
+    'Anchorman',
+    'Annie Hall',
+    'Any movie with Cary Grant',
+    'Apocalypse Now',
+    'Being There',
+    'Ben-Hur',
+    'Blackboard Jungle',
+    'Blade Runner',
+    'Blues Brothers',
+    'Boardwalk Empire (TV)',
+    'Bond movies',
+    'Bonnie and Clyde',
+    'Boy Choir',
+    'Bridge of Spies',
+    'Bringing Up Baby',
+    'Butch Cassidy and the Sundance Kid',
+    'Cabaret',
+    'Casablanca',
+    'Casino',
+    'Catch me if you can',
+    'Chinatown',
+    'City Lights',
+    'DOA',
+    'Do the Right Thing',
+    'Dogma',
+    'Double Indemnity',
+    'Dr. Strangelove',
+    'Duck Soup',
+    'E.T. the Extra-Terrestrial',
+    'Easy Rider',
+    'Election',
+    'Forrest Gump',
+    'Gattaca',
+    'Gone with the Wind',
+    'Goodfellas',
+    'Gotham (TV)',
+    'Havoc',
+    'High Noon',
+    'House of Cards',
+    'I Know Who Killed Me',
+    'In the Heat of the Night',
+    'Inception',
+    'Intolerance',
+    'It Happened One Night',
+    'It\'s a Wonderful Life',
+    'Jaws',
+    'Juno',
+    'King Kong',
+    'Kingsman (men?)',
+    'Labyrinth',
+    'Lawrence of Arabia',
+    'Leaving Las Vegas',
+    'Legend',
+    'Mad Men (TV)',
+    'Mash',
+    'Midnight Cowboy',
+    'Modern Times',
+    'Moulin Rogue',
+    'Mr. Smith Goes to Washington',
+    'Mrs Henderson Presents',
+    'Nashville',
+    'Network',
+    'North by Northwest',
+    'North by northwest',
+    'Oceans 11',
+    'Oceans 11 (1960)',
+    'On the Waterfront',
+    'One Flew Over the Cuckoo\'s Nest',
+    'Peaky Blinders',
+    'Person of internetst',
+    'Platoon',
+    'Primary',
+    'Princess Mononoke',
+    'Psycho',
+    'Pulp Fiction',
+    'Raging Bull',
+    'Raiders of the Lost Ark',
+    'Rear Window',
+    'Rebel Without a Cause',
+    'Red River',
+    'Rocky',
+    'Saving Private Ryan',
+    'Saving Private Ryan [AFI]',
+    'Schindler\'s List [AFI]',
+    'Serpico',
+    'Shane',
+    'Sin City',
+    'Singin\' in the Rain',
+    'Sink the Bismarck',
+    'Snow White and the Seven Dwarfs',
+    'Some Like it Hot',
+    'Sophie\'s Choice [AFI]',
+    'Spartacus',
+    'Spring Breakers',
+    'Stage Coach',
+    'Star Wars',
+    'Sucker Punch',
+    'Suits TV series',
+    'Sullivan\'s Travels',
+    'Sunrise',
+    'Sunset Blvd.',
+    'Swing Time',
+    'Taxi Driver',
+    'The African Queen',
+    'The Apartment',
+    'The Best Years of Our Lives',
+    'The Bridge on the River Kwai',
+    'The Deer Hunter',
+    'The French Connection',
+    'The General',
+    'The Godfather',
+    'The Godfather Part Ii',
+    'The Godfather pt II',
+    'The Gods Must Be Crazy',
+    'The Gold Rush',
+    'The Graduate',
+    'The Grapes of Wrath',
+    'The Great Escape',
+    'The Great Gatsby',
+    'The Italian Job',
+    'The Last Picture Show',
+    'The Lord of the Rings(FELLOWSHIP) |',
+    'The Maltese Falcon',
+    'The Manchurian Candidate',
+    'The Night Manager',
+    'The Philadelphia Story',
+    'The Runaways',
+    'The Searchers',
+    'The Shawshank Redemption',
+    'The Silence of the Lambs',
+    'The Sixth Sense',
+    'The Sound of Music',
+    'The Treasure of the Sierra Madre',
+    'The Untouchables',
+    'The West Wing',
+    'The Wild Bunch',
+    'The Wild One',
+    'The Wizard of Oz',
+    'The Wrestler',
+    'Thomas Crown Affair',
+    'Tinker, tailor, soldier, spy',
+    'Titanic',
+    'To Kill a Mockingbird',
+    'Tootsie',
+    'Topaz',
+    'Toy Story',
+    'Unforgiven',
+    'Vertigo',
+    'West Side Story',
+    'White Collar',
+    'Who\'s Afraid of Virginia Woolf?',
+    'Wolf of Wall Street',
+    'Yankee Doodle Dandy'];
 
 // Create new wheel object specifying the parameters at creation time.
-var theWheel = new Winwheel({
-    'outerRadius'     : 212,        // Set outer radius so wheel fits inside the background.
-    'innerRadius'     : 75,         // Make wheel hollow so segments don't go all way to center.
-    'textFontSize'    : 16,         // Set default font size for the segments.
-    'textOrientation' : 'horizontal', // Make text vertial so goes down from the outside of wheel.
-    'textAlignment'   : 'outer',    // Align text to outside of wheel.
-    'numSegments'     : 24,         // Specify number of segments.
-    'segments'        :             // Define segments including colour and text.
-    [                               // font size and test
-        //colour overridden on backrupt segments.
-        {'fillStyle' : '#ee1c24', 'text' : 'Midnight Cowboy'},
-        {'fillStyle' : '#3cb878', 'text' : 'Serpico'},
-        {'fillStyle' : '#f6989d', 'text' : 'Born into This'},
-        {'fillStyle' : '#00aef0', 'text' : 'I Love You, Alice B. Toklas'},
-        {'fillStyle' : '#f26522', 'text' : 'Raiders of the Lost Ark'},
-        {'fillStyle' : '#000000', 'text' : 'Rocky'},
-        {'fillStyle' : '#e70697', 'text' : 'Princess Mononoke'},
-        {'fillStyle' : '#fff200', 'text' : 'Andromeda Strain'},
-        {'fillStyle' : '#f6989d', 'text' : 'Mr. Smith Goes to Washington'},
-        {'fillStyle' : '#ee1c24', 'text' : 'The Aviator'},
-        {'fillStyle' : '#3cb878', 'text' : 'Easy A'},
-        {'fillStyle' : '#f26522', 'text' : 'Bridge of Spies'},
-        {'fillStyle' : '#a186be', 'text' : '2001: A Space Odyssey'},
-        {'fillStyle' : '#fff200', 'text' : 'The Shining'},
-        {'fillStyle' : '#00aef0', 'text' : 'Caddyshack'},
-        {'fillStyle' : '#ee1c24', 'text' : 'Body Heat'},
-        {'fillStyle' : '#f6989d', 'text' : 'Inland Empire'},
-        {'fillStyle' : '#f26522', 'text' : '*M*A*S*H'},
-        {'fillStyle' : '#3cb878', 'text' : 'Bad Day at Black Rock'},
-        {'fillStyle' : '#000000', 'text' : 'Broadcast News'},
-        {'fillStyle' : '#a186be', 'text' : 'One Flew Over the Cuckoo\'s Nest'},
-        {'fillStyle' : '#fff200', 'text' : 'Memento'},
-        {'fillStyle' : '#00aef0', 'text' : 'Labyrinth'},
-        {'fillStyle' : '#ffffff', 'text' : 'Rear Window'}
-    ],
-    'animation' :           // Specify the animation to use.
-    {
-        'type'     : 'spinToStop',
-        'duration' : 8,     // Duration in seconds.
-        'spins'    : 3,     // Default number of complete spins.
-        'callbackFinished' : 'alertPrize()'
-    }
-});
+
+var theWheel;
+
+function getRandomMovie() {
+    return movies[Math.floor(Math.random()*movies.length)];
+}
+
+function makeWheel() {
+    var wheel = new Winwheel({
+        'outerRadius'     : 212,        // Set outer radius so wheel fits inside the background.
+        'innerRadius'     : 75,         // Make wheel hollow so segments don't go all way to center.
+        'textFontSize'    : 16,         // Set default font size for the segments.
+        'textOrientation' : 'horizontal', // Make text vertial so goes down from the outside of wheel.
+        'textAlignment'   : 'outer',    // Align text to outside of wheel.
+        'numSegments'     : 24,         // Specify number of segments.
+        'segments'        :             // Define segments including colour and text.
+        [                               // font size and test
+            //colour overridden on backrupt segments.
+            {'fillStyle' : '#ee1c24', 'text' : getRandomMovie()},
+            {'fillStyle' : '#3cb878', 'text' : getRandomMovie()},
+            {'fillStyle' : '#f6989d', 'text' : getRandomMovie()},
+            {'fillStyle' : '#00aef0', 'text' : getRandomMovie()},
+            {'fillStyle' : '#f26522', 'text' : getRandomMovie()},
+            {'fillStyle' : '#a186be', 'text' : getRandomMovie()},
+            {'fillStyle' : '#e70697', 'text' : getRandomMovie()},
+            {'fillStyle' : '#fff200', 'text' : getRandomMovie()},
+            {'fillStyle' : '#f6989d', 'text' : getRandomMovie()},
+            {'fillStyle' : '#ee1c24', 'text' : getRandomMovie()},
+            {'fillStyle' : '#3cb878', 'text' : getRandomMovie()},
+            {'fillStyle' : '#f26522', 'text' : getRandomMovie()},
+            {'fillStyle' : '#a186be', 'text' : getRandomMovie()},
+            {'fillStyle' : '#fff200', 'text' : getRandomMovie()},
+            {'fillStyle' : '#00aef0', 'text' : getRandomMovie()},
+            {'fillStyle' : '#ee1c24', 'text' : getRandomMovie()},
+            {'fillStyle' : '#f6989d', 'text' : getRandomMovie()},
+            {'fillStyle' : '#f26522', 'text' : getRandomMovie()},
+            {'fillStyle' : '#3cb878', 'text' : getRandomMovie()},
+            {'fillStyle' : '#e70697', 'text' : getRandomMovie()},
+            {'fillStyle' : '#a186be', 'text' : getRandomMovie()},
+            {'fillStyle' : '#fff200', 'text' : getRandomMovie()},
+            {'fillStyle' : '#00aef0', 'text' : getRandomMovie()},
+            {'fillStyle' : '#ffffff', 'text' : getRandomMovie()},
+        ],
+        'animation' :           // Specify the animation to use.
+        {
+            'type'     : 'spinToStop',
+            'duration' : 8,     // Duration in seconds.
+            'spins'    : 3,     // Default number of complete spins.
+            'callbackFinished' : 'alertPrize()'
+        }
+    });
+    return wheel;
+}
 
 // Vars used by the code in this page to do power controls.
 var wheelPower    = 0;
@@ -128,7 +303,11 @@ function startSpin()
 // -------------------------------------------------------
 function resetWheel()
 {
-    theWheel.stopAnimation(false);  // Stop the animation, false as param so does not call callback function.
+    if (theWheel) {
+        theWheel.stopAnimation(false);  // Stop the animation, false as param so does not call callback function.
+    }
+
+    theWheel = makeWheel();
     theWheel.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
     theWheel.draw();                // Call draw to render changes to the wheel.
 
@@ -137,6 +316,9 @@ function resetWheel()
     document.getElementById('pw3').className = "";
 
     wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
+    console.log(theWheel.segments[4].text);
+    console.log(theWheel.segments[5].text);
+    console.log(theWheel.segments[6].text);
 }
 
 // -------------------------------------------------------
@@ -146,19 +328,7 @@ function alertPrize()
 {
     // Get the segment indicated by the pointer on the wheel background which is at 0 degrees.
     var winningSegment = theWheel.getIndicatedSegment();
-
-    // Just alert to the user what happened.
-    // In a real project probably want to do something more interesting than this with the result.
-    if (winningSegment.text == 'LOOSE TURN')
-    {
-        alert('Sorry but you loose a turn.');
-    }
-    else if (winningSegment.text == 'BANKRUPT')
-    {
-        alert('Oh no, you have gone BANKRUPT!');
-    }
-    else
-    {
-        alert("Your movie is " + winningSegment.text);
-    }
+    alert("Your movie is " + winningSegment.text);
 }
+
+resetWheel();
