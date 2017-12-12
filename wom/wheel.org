@@ -1,6 +1,7 @@
-#+TITLE: wheel
+#+TITLE: Notes on the Wheel of Movies
 
-* wheel
+* First pass to hack things up
+** wheel
 #+BEGIN_SRC emacs-lisp :results output
 (setq slice-formats (list
       "{'fillStyle' : '#ee1c24', 'text' : '%s'},"
@@ -62,7 +63,7 @@
 "{'fillStyle' : '#00aef0', 'text' : 'Labyrinth'},"
 "{'fillStyle' : '#ffffff', 'text' : 'Rear Window'}"
 #+end_example
-* The list for trying
+** The list for trying
 #+BEGIN_SRC emacs-lisp
 (setq movies '("Midnight Cowboy"
                "Serpico"
@@ -91,14 +92,14 @@
 #+END_SRC
 #+RESULTS:
 | Midnight Cowboy | Serpico | Born into This | I Love You, Alice B. Toklas | Raiders of the Lost Ark | Rocky | Princess Mononoke | Andromeda Strain | Mr. Smith Goes to Washington | The Aviator | Easy A | Bridge of Spies | 2001: A Space Odyssey | The Shining | Caddyshack | Body Heat | Inland Empire | *M*A*S*H | Bad Day at Black Rock | Broadcast News | One Flew Over the Cuckoo's Nest | Memento | Labyrinth | Rear Window |
-* Working the list
+** Working the list
 #+BEGIN_SRC emacs-lisp :results output
 (dolist (x xx-result)
   (print x)
   )
 #+END_SRC
 #+RESULTS:
-** more if i need them
+*** more if i need them
 "A Streetcar Named Desire"
 "Godfather 2"
 "** Lynch films list"
@@ -168,3 +169,7 @@
 "Cashback"
 "Blue is the Warmest Color"
 "Spring Breakers"
+* Second pass: add the whole list
+This requires regenerating the wheel each time from a bigger array. So I'm reworking the code a bit.
+** Javascript setup
+I haven't really done much with Javascript in Emacs before, so I'm setting up my javascript environment as well.
