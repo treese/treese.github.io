@@ -155,16 +155,16 @@ var movies = [
 var theWheel;
 
 function getRandomMovie() {
-    return movies[Math.floor(Math.random()*movies.length)];
+    return movies[Math.floor(Math.random()*movies.length)].substring(0,24);
 }
 
 function makeWheel() {
     var wheel = new Winwheel({
         'outerRadius'     : 212,        // Set outer radius so wheel fits inside the background.
-        'innerRadius'     : 75,         // Make wheel hollow so segments don't go all way to center.
-        'textFontSize'    : 16,         // Set default font size for the segments.
+        'innerRadius'     : 50,         // Make wheel hollow so segments don't go all way to center.
+        'textFontSize'    : 13,         // Set default font size for the segments.
         'textOrientation' : 'horizontal', // Make text vertial so goes down from the outside of wheel.
-        'textAlignment'   : 'outer',    // Align text to outside of wheel.
+        'textAlignment'   : 'inner',    // Align text to outside of wheel.
         'numSegments'     : 24,         // Specify number of segments.
         'segments'        :             // Define segments including colour and text.
         [                               // font size and test
@@ -296,11 +296,6 @@ function resetWheel()
     theWheel.rotationAngle = 0;     // Re-set the wheel angle to 0 degrees.
     theWheel.draw();                // Call draw to render changes to the wheel.
 
-    /*
-      document.getElementById('pw1').className = "";  // Remove all colours from the power level indicators.
-      document.getElementById('pw2').className = "";
-      document.getElementById('pw3').className = "";
-    */
     wheelSpinning = false;          // Reset to false to power buttons and spin can be clicked again.
 
     // Light up the spin button by changing its source image and
